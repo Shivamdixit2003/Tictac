@@ -1,0 +1,93 @@
+.gameContainer{
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.input{
+    width: 50px;
+    height: 50px;
+    max-width: 33.33%;
+    flex-direction: row;
+    border:2px solid black;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(54, 2, 54);
+    color: white;
+    height: 65px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+nav ul{
+    list-style-type: none;
+   
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+
+}
+.box{
+    border: 1px solid black;
+    font-size: 8vw;
+   text-align: center;
+}
+.box:hover{
+background-color: rgb(228, 228, 228);
+cursor: pointer;
+}
+.gameinfo{
+    padding: 0 35px;
+}
+.br-0{
+    border-right: 0px;
+    }
+    .bt-0{
+        border-top:0px;
+    }
+    .bl-0{
+        border-left:0px;
+    }
+    .bb-0{
+        border-bottom:0px;
+    }
+    .info{
+        font-size: x-large;
+    }
+#reset{
+  
+margin-top: 20px;
+background-color: rgb(201, 176, 224);
+padding: 4px 13px 4px  13px;
+border-radius: 8px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 15px;
+border:1px solid rgb(121, 179, 29);
+color:black
+}
+.greet{
+text-align: center;
+margin: 2% 0 0 0;
+}
+    @media screen and (max-width:800px){
+        .container, .pageInfo {
+            width: 100%; 
+            /* The width is 100%, when the viewport is 768px or smaller */
+          }
+          .container{
+        margin: 0 0 5% 34%;
+          }
+          .greet{
+            font-size:4vw;
+            
+          }
+    }
