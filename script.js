@@ -3,13 +3,14 @@ let ans1 = confirm(
   "Do you Want to enter names of Player? \n Click OK for Yes and Cancle for NO"
 );
 let plr = ["X", "O"];
-let prevplr=plr;
+
 if (ans1) {
   let plr1 = prompt("Enter 1st Player Name");
   let plr2 = prompt("Enter 2nd Player Name");
   plr[0] = plr1;
   plr[1] = plr2;
 }
+let prevplr=[plr[0],plr[1]];
 document.querySelector(".info").innerText ='Turn For '+ plr[0] ;
 let music = new Audio("music.wav");
 let turnm = new Audio("music.wav");
@@ -80,7 +81,8 @@ Array.from(boxes).forEach((element) => {
 
 //Onclick on reset button
 reset.addEventListener('click', ()=>{
-  plr=prevplr;
+  plr[0]=prevplr[0];
+  plr[1]=prevplr[1];
 let boxText = document.querySelectorAll(".boxtext");
     Array.from(boxText).forEach((e)=>{
      e.innerText='';
