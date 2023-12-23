@@ -10,7 +10,7 @@ if (ans1) {
   plr[0] = plr1;
   plr[1] = plr2;
 }
-let prevplr=[plr[0],plr[1]];
+
 document.querySelector(".info").innerText ='Turn For '+ plr[0] ;
 let music = new Audio("music.wav");
 let turnm = new Audio("music.wav");
@@ -80,10 +80,9 @@ Array.from(boxes).forEach((element) => {
 });
 
 //Onclick on reset button
+let reset = document.querySelector(".reset");
 reset.addEventListener('click', ()=>{
-  plr[0]=prevplr[0];
-  plr[1]=prevplr[1];
-  console.log(plr[0],plr[1]);
+
 let boxText = document.querySelectorAll(".boxtext");
     Array.from(boxText).forEach((e)=>{
      e.innerText='';
