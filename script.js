@@ -85,7 +85,10 @@ Array.from(boxes).forEach((element) => {
 //Onclick on reset button
 let reset = document.querySelector("#reset");
 reset.addEventListener('click', ()=>{
-
+CrossCrash.forEach(e){
+  e.style.textDecoration="none";
+e.pop();
+}
 let boxText = document.querySelectorAll(".boxtext");
     Array.from(boxText).forEach((e)=>{
      e.innerText='';
