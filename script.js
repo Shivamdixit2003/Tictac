@@ -3,7 +3,7 @@ let ans1 = confirm(
   "Do you Want to enter names of Player? \n Click OK for Yes and Cancle for NO"
 );
 let plr = ["X", "O"];
-
+let CrossCrash=[];
 if (ans1) {
   let plr1 = prompt("Enter 1st Player Name");
   let plr2 = prompt("Enter 2nd Player Name");
@@ -50,6 +50,9 @@ const checkWin = () => {
       document.querySelector(".info").innerText = turn + " has been WON!!";
       //alert('The'+boxtext[e[0]].innerText + 'is WON');
       boxtext[e[0]].style.textDecoration = "line-through";
+      CrossCrash.push(boxtext[e[0]]);
+      CrossCrash.push(boxtext[e[1]]);
+      CrossCrash.push(boxtext[e[2]]);
       isgameover = "true";
       boxtext[e[1]].style.textDecoration = "line-through";
       boxtext[e[2]].style.textDecoration = "line-through";
