@@ -83,6 +83,7 @@ Array.from(boxes).forEach((element) => {
 reset.addEventListener('click', ()=>{
   plr[0]=prevplr[0];
   plr[1]=prevplr[1];
+  console.log(plr[0],plr[1]);
 let boxText = document.querySelectorAll(".boxtext");
     Array.from(boxText).forEach((e)=>{
      e.innerText='';
