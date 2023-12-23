@@ -80,7 +80,7 @@ Array.from(boxes).forEach((element) => {
 });
 
 //Onclick on reset button
-let reset = document.querySelector(".reset");
+let reset = document.querySelector("#reset");
 reset.addEventListener('click', ()=>{
 
 let boxText = document.querySelectorAll(".boxtext");
