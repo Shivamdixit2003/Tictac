@@ -3,6 +3,7 @@ let ans1 = confirm(
   "Do you Want to enter names of Player? \n Click OK for Yes and Cancle for NO"
 );
 let plr = ["X", "O"];
+let prevplr=plr;
 if (ans1) {
   let plr1 = prompt("Enter 1st Player Name");
   let plr2 = prompt("Enter 2nd Player Name");
@@ -79,6 +80,7 @@ Array.from(boxes).forEach((element) => {
 
 //Onclick on reset button
 reset.addEventListener('click', ()=>{
+  plr=prevplr;
 let boxText = document.querySelectorAll(".boxtext");
     Array.from(boxText).forEach((e)=>{
      e.innerText='';
